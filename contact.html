@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Contact Us | Lubai Ltd - Electrical & Building Engineering</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: {
+                            900: '#0f172a', // Deep Slate / Navy
+                            800: '#1e293b',
+                            600: '#475569',
+                            amber: '#f59e0b', // Safety Amber
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Corporate Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Top Utility Bar -->
+    <div class="bg-corporate-900 text-slate-300 text-xs py-2 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-phone text-corporate-amber mr-1"></i> +254 721 790 042/ +254 769 219 295</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-envelope text-corporate-amber mr-1"></i> info@lubai.co.ke</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Nairobi, Kenya</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex justify-between items-center">
+            <!-- Logo Area -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-corporate-900 rounded-lg flex items-center justify-center text-corporate-amber font-black text-xl">
+                    <img src="logo.png" alt="Lubai Logo" class="w-6 h-6">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl tracking-tight text-corporate-900 uppercase">Lubai</span>
+                    <span class="text-[10px] tracking-widest text-corporate-600 uppercase font-semibold">Electrical & Building</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                <a href="index.html" class="hover:text-corporate-amber transition">Home</a>
+                <a href="about.html" class="hover:text-corporate-amber transition">About Us</a>
+                <a href="services.html" class="hover:text-corporate-amber transition">Services</a>
+                <a href="projects.html" class="hover:text-corporate-amber transition">Portfolio</a>
+                <a href="contact.html" class="bg-corporate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-md transition shadow-md">Get a Quote</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="index.html" class="block text-slate-600 hover:text-corporate-amber py-2">Home</a>
+            <a href="about.html" class="block text-slate-600 hover:text-corporate-amber py-2">About Us</a>
+            <a href="services.html" class="block text-slate-600 hover:text-corporate-amber py-2">Services</a>
+            <a href="projects.html" class="block text-slate-600 hover:text-corporate-amber py-2">Portfolio</a>
+            <a href="contact.html" class="block bg-corporate-900 text-white text-center py-2.5 rounded-md">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Page Header Hero -->
+    <section class="bg-corporate-900 text-white py-16 px-4 sm:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center space-y-4">
+            <span class="bg-corporate-amber/10 text-corporate-amber text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider border border-corporate-amber/20">
+                Get In Touch
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Contact Our Engineers</h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                Reach out for professional site assessments, project consultations, or custom engineering quotations across Kenya.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left Column: Contact Details & Info -->
+            <div class="lg:col-span-5 space-y-8">
+                <div class="space-y-3">
+                    <span class="text-xs font-bold text-corporate-amber uppercase tracking-widest">Communication Channels</span>
+                    <h2 class="text-3xl font-bold text-corporate-900">Let's Discuss Your Project</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our technical support team and lead engineers are available during regular business hours. For emergency power grid repairs, reach us via phone directly.
+                    </p>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="space-y-4">
+                    <!-- Location Card -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center text-corporate-amber text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-corporate-900 mb-1">Physical Office Location</h3>
+                            <p class="text-slate-600 text-sm">Industrial Area / Westlands Link Road<br>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center text-corporate-amber text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-corporate-900 mb-1">Direct Telephone</h3>
+                            <p class="text-slate-600 text-sm">+254 721 790 042<br>+254 769 219 295</p>
+                        </div>
+                    </div>
+
+                    <!-- Email Card -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center text-corporate-amber text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-corporate-900 mb-1">Email Inquiries</h3>
+                            <p class="text-slate-600 text-sm">info@lubai.co.ke<br>projects@lubai.co.ke</p>
+                        </div>
+                    </div>
+
+                    <!-- Hours Card -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center text-corporate-amber text-xl shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-corporate-900 mb-1">Operating Hours</h3>
+                            <p class="text-slate-600 text-sm">Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday: 9:00 AM – 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Static Frontend Contact Form -->
+            <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-slate-200">
+                <div class="mb-6 space-y-2">
+                    <h2 class="text-2xl font-bold text-corporate-900">Request a Site Visit or Quote</h2>
+                    <p class="text-slate-600 text-sm">Fill out the form below with your project details and our team will get back to you promptly.</p>
+                </div>
+
+                <!-- Static Form -->
+                <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully. Our team will contact you shortly.');">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Your Full Name <span class="text-corporate-amber">*</span></label>
+                            <input type="text" id="name" required placeholder="e.g. John Kamau" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporate-amber transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Phone Number <span class="text-corporate-amber">*</span></label>
+                            <input type="tel" id="phone" required placeholder="e.g. +254 712 345 678" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporate-amber transition">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Email Address <span class="text-corporate-amber">*</span></label>
+                            <input type="email" id="email" required placeholder="e.g. john@company.co.ke" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporate-amber transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="service" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Interested Service</label>
+                            <select id="service" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporate-amber transition">
+                                <option value="power-distribution">Power Distribution</option>
+                                <option value="electrical-installation">Electrical Installation</option>
+                                <option value="solar-systems">Solar Systems</option>
+                                <option value="cctv">CCTV & Security</option>
+                                <option value="electric-fence">Electric Fencing</option>
+                                <option value="general">General Consultation / Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Project Details / Message <span class="text-corporate-amber">*</span></label>
+                        <textarea id="message" rows="5" required placeholder="Describe your site, building type, or specific requirements..." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-corporate-amber transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-corporate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-lg transition shadow-md flex items-center justify-center space-x-2">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane text-corporate-amber"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Embedded Google Map Section -->
+    <section class="w-full pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 p-2">
+                <div class="w-full h-96 rounded-xl overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.267885747414!2d36.817223!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d226a3a411%3A0x3bf3f43b1772b15e!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1650000000000!5m2!1sen!2ske" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-corporate-900 text-slate-400 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-corporate-amber rounded flex items-center justify-center text-corporate-900 font-black">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span class="font-bold text-white text-lg tracking-tight uppercase">Lubai</span>
+                </div>
+                <p class="text-xs text-slate-400">Professional electrical contracting, green energy installations, and industrial security integration.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-corporate-amber transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-corporate-amber transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-corporate-amber transition">Our Services</a></li>
+                    <li><a href="projects.html" class="hover:text-corporate-amber transition">Portfolio</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Core Sectors</h4>
+                <ul class="space-y-2 text-xs">
+                    <li>Power Distribution</li>
+                    <li>Solar Grid Integration</li>
+                    <li>Industrial Wiring</li>
+                    <li>Perimeter Security</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Contact Info</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><i class="fa-solid fa-location-dot text-corporate-amber mr-2"></i> Nairobi, Kenya</li>
+                    <li><i class="fa-solid fa-phone text-corporate-amber mr-2"></i> +254 721 790 042/ +254 769 219 295</li>
+                    <li><i class="fa-solid fa-envelope text-corporate-amber mr-2"></i> info@lubai.co.ke</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-corporate-800 py-4 text-center text-xs text-slate-500">
+            &copy; 2026 Lubai Ltd. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Our Services | Lubai Ltd - Electrical & Building Engineering</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: {
+                            900: '#0f172a', // Deep Slate / Navy
+                            800: '#1e293b',
+                            600: '#475569',
+                            amber: '#f59e0b', // Safety Amber
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Corporate Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Top Utility Bar -->
+    <div class="bg-corporate-900 text-slate-300 text-xs py-2 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-phone text-corporate-amber mr-1"></i> +254 721 790 042/ +254 769 219 295</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-envelope text-corporate-amber mr-1"></i> info@lubai.co.ke</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Nairobi, Kenya</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex justify-between items-center">
+            <!-- Logo Area -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-corporate-900 rounded-lg flex items-center justify-center text-corporate-amber font-black text-xl">
+                    <img src="logo.png" alt="Lubai Logo" class="w-6 h-6">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl tracking-tight text-corporate-900 uppercase">Lubai</span>
+                    <span class="text-[10px] tracking-widest text-corporate-600 uppercase font-semibold">Electrical & Building</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                <a href="index.html" class="hover:text-corporate-amber transition">Home</a>
+                <a href="about.html" class="hover:text-corporate-amber transition">About Us</a>
+                <a href="services.html" class="text-corporate-amber font-semibold transition">Services</a>
+                <a href="projects.html" class="hover:text-corporate-amber transition">Portfolio</a>
+                <a href="contact.html" class="bg-corporate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-md transition shadow-md">Get a Quote</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="index.html" class="block text-slate-600 hover:text-corporate-amber py-2">Home</a>
+            <a href="about.html" class="block text-slate-600 hover:text-corporate-amber py-2">About Us</a>
+            <a href="services.html" class="block text-corporate-amber font-medium py-2">Services</a>
+            <a href="projects.html" class="block text-slate-600 hover:text-corporate-amber py-2">Portfolio</a>
+            <a href="contact.html" class="block bg-corporate-900 text-white text-center py-2.5 rounded-md">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Page Header Hero -->
+    <section class="bg-corporate-900 text-white py-16 px-4 sm:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center space-y-4">
+            <span class="bg-corporate-amber/10 text-corporate-amber text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider border border-corporate-amber/20">
+                Engineering Solutions
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Our Core Services</h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                We deliver robust, high-performance infrastructure solutions built strictly to international safety standards, backed by certified engineering execution.
+            </p>
+        </div>
+    </section>
+
+    <!-- Detailed Services List Section -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+
+        <!-- Service 1: Power Distribution -->
+        <div id="power-distribution" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 lg:p-12">
+            <div class="lg:col-span-5 space-y-4">
+                <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center text-corporate-amber text-2xl">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <span class="text-xs font-bold text-corporate-amber uppercase tracking-widest">Primary Infrastructure</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-corporate-900">Power Distribution</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    We engineer reliable, high-capacity electrical distribution systems tailored for commercial complexes, industrial plants, and large residential estates. Our solutions guarantee minimal power loss, safe load balancing, and compliance with national power grids.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Sub-station & Transformer Layouts</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Main Switchboard Design & Setup</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Load Calculations & Fault Protection</li>
+                </ul>
+            </div>
+            <div class="lg:col-span-7 bg-slate-100 rounded-xl overflow-hidden h-64 sm:h-80 border border-slate-200 relative flex items-center justify-center">
+                <!-- High-tech placeholder styling / Image wrapper -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-90" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1000&q=80')"></div>
+                <div class="absolute inset-0 bg-corporate-900/30"></div>
+                <span class="relative z-10 text-white font-bold bg-corporate-900/80 px-4 py-2 rounded text-xs uppercase tracking-wider backdrop-blur">Industrial Power Substation Grid</span>
+            </div>
+        </div>
+
+        <!-- Service 2: Electrical Installation -->
+        <div id="electrical-installation" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 lg:p-12">
+            <div class="lg:col-span-7 bg-slate-100 rounded-xl overflow-hidden h-64 sm:h-80 border border-slate-200 relative flex items-center justify-center lg:order-1">
+                <div class="absolute inset-0 bg-cover bg-center opacity-90" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80')"></div>
+                <div class="absolute inset-0 bg-corporate-900/30"></div>
+                <span class="relative z-10 text-white font-bold bg-corporate-900/80 px-4 py-2 rounded text-xs uppercase tracking-wider backdrop-blur">Precision Structured Wiring</span>
+            </div>
+            <div class="lg:col-span-5 space-y-4 lg:order-2">
+                <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center text-corporate-amber text-2xl">
+                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                </div>
+                <span class="text-xs font-bold text-corporate-amber uppercase tracking-widest">Building Works</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-corporate-900">Electrical Installation</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Precision wiring and seamless internal distribution network setups for new constructions and building renovations. From high-rise lighting automation to heavy industrial machine hookups, we execute clean cable routing and strict safety protocols.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Structured Commercial & Residential Wiring</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Lighting Automation & Fixture Fitting</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Comprehensive Electrical Safety Audits</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service 3: Solar Systems -->
+        <div id="solar-systems" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 lg:p-12">
+            <div class="lg:col-span-5 space-y-4">
+                <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center text-corporate-amber text-2xl">
+                    <i class="fa-solid fa-solar-panel"></i>
+                </div>
+                <span class="text-xs font-bold text-corporate-amber uppercase tracking-widest">Green Energy Solutions</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-corporate-900">Solar Systems</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Future-proof your energy overhead with our custom photovoltaic installations. We design turnkey solar grid-tied and hybrid battery backup configurations that protect commercial operations against power outages while optimizing energy consumption.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Commercial & Residential Rooftop Arrays</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Hybrid Inverter & Deep-Cycle Battery Banks</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Performance Monitoring & Maintenance</li>
+                </ul>
+            </div>
+            <div class="lg:col-span-7 bg-slate-100 rounded-xl overflow-hidden h-64 sm:h-80 border border-slate-200 relative flex items-center justify-center">
+                <div class="absolute inset-0 bg-cover bg-center opacity-90" style="background-image: url('https://images.unsplash.com/photo-1509391365360-8042456e3558?auto=format&fit=crop&w=1000&q=80')"></div>
+                <div class="absolute inset-0 bg-corporate-900/30"></div>
+                <span class="relative z-10 text-white font-bold bg-corporate-900/80 px-4 py-2 rounded text-xs uppercase tracking-wider backdrop-blur">
+                  <img src="solar.png" alt="Lubai Logo" class="solar-panel"></span>
+            </div>
+        </div>
+
+        <!-- Service 4: CCTV & Security -->
+        <div id="cctv-surveillance" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 lg:p-12">
+            <div class="lg:col-span-7 bg-slate-100 rounded-xl overflow-hidden h-64 sm:h-80 border border-slate-200 relative flex items-center justify-center lg:order-1">
+                <div class="absolute inset-0 bg-cover bg-center opacity-90" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1000&q=80')"></div>
+                <div class="absolute inset-0 bg-corporate-900/30"></div>
+                <span class="relative z-10 text-white font-bold bg-corporate-900/80 px-4 py-2 rounded text-xs uppercase tracking-wider backdrop-blur">IP Surveillance & Control Rooms</span>
+            </div>
+            <div class="lg:col-span-5 space-y-4 lg:order-2">
+                <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center text-corporate-amber text-2xl">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <span class="text-xs font-bold text-corporate-amber uppercase tracking-widest">Facility Protection</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-corporate-900">CCTV & Surveillance</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Protect your physical assets with crystal-clear digital surveillance architecture. We deploy high-definition IP camera networks, intelligent NVR recording rigs, and secure remote mobile monitoring dashboards for real-time facility oversight.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> HD & 4K IP Camera Network Deployments</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Centralized NVR Control Room Setup</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Secure Remote Mobile & PC Access</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service 5: Electric Fence -->
+        <div id="electric-fence" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 lg:p-12">
+            <div class="lg:col-span-5 space-y-4">
+                <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center text-corporate-amber text-2xl">
+                    <i class="fa-solid fa-fence"></i>
+                </div>
+                <span class="text-xs font-bold text-corporate-amber uppercase tracking-widest">Perimeter Security</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-corporate-900">Electric Fencing</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Fortify your boundary lines with professional-grade high-tension electric security fences. Engineered to deter intrusion instantly while integrating seamlessly with local alarms and security guard response stations.
+                </p>
+                <ul class="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> High-Voltage Perimeter Energizer Units</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> High-Tension Galvanized Wire Rigging</li>
+                    <li><i class="fa-solid fa-check text-corporate-amber mr-2"></i> Zone Fault Alarm System Integration</li>
+                </ul>
+            </div>
+            <div class="lg:col-span-7 bg-slate-100 rounded-xl overflow-hidden h-64 sm:h-80 border border-slate-200 relative flex items-center justify-center">
+                <div class="absolute inset-0 bg-cover bg-center opacity-90" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb18f86f6?auto=format&fit=crop&w=1000&q=80')"></div>
+                <div class="absolute inset-0 bg-corporate-900/30"></div>
+                <span class="relative z-10 text-white font-bold bg-corporate-900/80 px-4 py-2 rounded text-xs uppercase tracking-wider backdrop-blur"><img src="Electric-fence.jpeg" alt="Electric Fence"></span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- High-Conversion CTA Banner -->
+    <section class="bg-corporate-900 text-white py-16 px-4 sm:px-8 mb-12">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to Start Your Project?</h2>
+            <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+                Get in touch with our team of technical specialists for professional consultations, site assessments, and customized project quotations.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+                <a href="contact.html" class="bg-corporate-amber hover:bg-amber-600 text-corporate-900 font-bold px-8 py-3.5 rounded-md text-center transition shadow-lg">
+                    Request a Free Quote
+                </a>
+                <a href="projects.html" class="bg-transparent hover:bg-white/10 text-white border border-slate-600 font-semibold px-8 py-3.5 rounded-md text-center transition">
+                    View Our Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-corporate-900 text-slate-400 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-corporate-amber rounded flex items-center justify-center text-corporate-900 font-black">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span class="font-bold text-white text-lg tracking-tight uppercase">Lubai</span>
+                </div>
+                <p class="text-xs text-slate-400">Professional electrical contracting, green energy installations, and industrial security integration.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-corporate-amber transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-corporate-amber transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-corporate-amber transition">Our Services</a></li>
+                    <li><a href="projects.html" class="hover:text-corporate-amber transition">Portfolio</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Core Sectors</h4>
+                <ul class="space-y-2 text-xs">
+                    <li>Power Distribution</li>
+                    <li>Solar Grid Integration</li>
+                    <li>Industrial Wiring</li>
+                    <li>Perimeter Security</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Contact Info</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><i class="fa-solid fa-location-dot text-corporate-amber mr-2"></i> Nairobi, Kenya</li>
+                    <li><i class="fa-solid fa-phone text-corporate-amber mr-2"></i> +254 721 790 042/ +254 769 219 295</li>
+                    <li><i class="fa-solid fa-envelope text-corporate-amber mr-2"></i> info@lubai.co.ke</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-corporate-800 py-4 text-center text-xs text-slate-500">
+            &copy; 2026 Lubai Ltd. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

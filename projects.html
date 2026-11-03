@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Our Portfolio & Projects | Lubai Ltd</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: {
+                            900: '#0f172a', // Deep Slate / Navy
+                            800: '#1e293b',
+                            600: '#475569',
+                            amber: '#f59e0b', // Safety Amber
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Corporate Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Top Utility Bar -->
+    <div class="bg-corporate-900 text-slate-300 text-xs py-2 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-phone text-corporate-amber mr-1"></i> +254 721 790 042/ +254 769 219 295</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-envelope text-corporate-amber mr-1"></i> info@lubai.co.ke</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Nairobi, Kenya</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex justify-between items-center">
+            <!-- Logo Area -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-corporate-900 rounded-lg flex items-center justify-center text-corporate-amber font-black text-xl">
+                    <img src="logo.png" alt="Lubai Logo" class="w-6 h-6">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl tracking-tight text-corporate-900 uppercase">Lubai</span>
+                    <span class="text-[10px] tracking-widest text-corporate-600 uppercase font-semibold">Electrical & Building</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                <a href="index.html" class="hover:text-corporate-amber transition">Home</a>
+                <a href="about.html" class="hover:text-corporate-amber transition">About Us</a>
+                <a href="services.html" class="hover:text-corporate-amber transition">Services</a>
+                <a href="projects.html" class="text-corporate-amber font-semibold transition">Portfolio</a>
+                <a href="contact.html" class="bg-corporate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-md transition shadow-md">Get a Quote</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="index.html" class="block text-slate-600 hover:text-corporate-amber py-2">Home</a>
+            <a href="about.html" class="block text-slate-600 hover:text-corporate-amber py-2">About Us</a>
+            <a href="services.html" class="block text-slate-600 hover:text-corporate-amber py-2">Services</a>
+            <a href="projects.html" class="block text-corporate-amber font-medium py-2">Portfolio</a>
+            <a href="contact.html" class="block bg-corporate-900 text-white text-center py-2.5 rounded-md">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Page Header Hero -->
+    <section class="bg-corporate-900 text-white py-16 px-4 sm:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center space-y-4">
+            <span class="bg-corporate-amber/10 text-corporate-amber text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider border border-corporate-amber/20">
+                Track Record of Excellence
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Project Portfolio</h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                Explore our benchmark electrical grid configurations, commercial building installations, and structural security setups executed across Kenya.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons Bar -->
+    <section class="bg-white border-b border-slate-200 sticky top-20 z-40 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex flex-wrap gap-2 justify-center sm:justify-start items-center">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-4 hidden sm:inline">Filter By Sector:</span>
+            <button onclick="filterProjects('all')" class="filter-btn active-filter bg-corporate-900 text-white text-xs font-semibold px-4 py-2 rounded-md transition">All Projects</button>
+            <button onclick="filterProjects('commercial')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-semibold px-4 py-2 rounded-md transition">Commercial Buildings</button>
+            <button onclick="filterProjects('industrial')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-semibold px-4 py-2 rounded-md transition">Industrial & Power</button>
+            <button onclick="filterProjects('solar')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-semibold px-4 py-2 rounded-md transition">Solar & Green Energy</button>
+            <button onclick="filterProjects('security')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-semibold px-4 py-2 rounded-md transition">Security & Surveillance</button>
+        </div>
+    </section>
+
+    <!-- Project Visual Grid Section -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-8 w-full">
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Project 1: Commercial -->
+            <div class="project-card commercial bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg transition group">
+                <div class="relative h-64 overflow-hidden bg-slate-100">
+                    <img src="westlands-tower.jpeg" alt="Westlands Corporate Tower" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-3 left-3 bg-corporate-900/90 backdrop-blur text-corporate-amber text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-xs text-corporate-600 font-semibold uppercase tracking-wider"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Westlands, Nairobi</div>
+                    <h3 class="text-xl font-bold text-corporate-900">Apex Commercial Tower</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Complete internal structured electrical installation, distribution board cascading, and intelligent emergency backup circuits for a 14-story corporate office block.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-1">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Structured Wiring</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Sub-panels</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Industrial -->
+            <div class="project-card industrial bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg transition group">
+                <div class="relative h-64 overflow-hidden bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" alt="Industrial Substation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-3 left-3 bg-corporate-900/90 backdrop-blur text-corporate-amber text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                        Industrial & Power
+                    </div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-xs text-corporate-600 font-semibold uppercase tracking-wider"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Athi River Industrial Zone</div>
+                    <h3 class="text-xl font-bold text-corporate-900">Athi River Manufacturing Substation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        High-capacity power distribution substation setup, transformer grounding, and heavy-duty industrial machinery hookups engineered for zero downtime.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-1">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Power Distribution</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Transformers</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Solar -->
+            <div class="project-card solar bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg transition group">
+                <div class="relative h-64 overflow-hidden bg-slate-100">
+                    <img src="rift valley-solar grid.jpeg" alt="Rift Valley Solar Grid" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-3 left-3 bg-corporate-900/90 backdrop-blur text-corporate-amber text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                        Solar & Green Energy
+                    </div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-xs text-corporate-600 font-semibold uppercase tracking-wider"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Naivasha Horticultural Farm</div>
+                    <h3 class="text-xl font-bold text-corporate-900">Naivasha Agro-Solar Hybrid Grid</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Turnkey 250kW rooftop photovoltaic solar array integrated with a heavy-duty hybrid inverter bank to maintain continuous cold-room cold storage operations.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-1">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Solar PV Arrays</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Hybrid Inverters</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Security -->
+            <div class="project-card security bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg transition group">
+                <div class="relative h-64 overflow-hidden bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80" alt="Karen Gated Estate Security" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-3 left-3 bg-corporate-900/90 backdrop-blur text-corporate-amber text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                        Security & Surveillance
+                    </div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-xs text-corporate-600 font-semibold uppercase tracking-wider"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Karen, Nairobi</div>
+                    <h3 class="text-xl font-bold text-corporate-900">Karen Residential Estate Perimeter</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Comprehensive perimeter fortification featuring 3.2km of high-tension electric fencing, zoned energizers, and 4K IP CCTV surveillance monitoring gates.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-1">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Electric Fencing</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">IP CCTV Arrays</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Commercial -->
+            <div class="project-card commercial bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg transition group">
+                <div class="relative h-64 overflow-hidden bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Upperhill Mall" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-3 left-3 bg-corporate-900/90 backdrop-blur text-corporate-amber text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                        Commercial
+                    </div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-xs text-corporate-600 font-semibold uppercase tracking-wider"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Upperhill, Nairobi</div>
+                    <h3 class="text-xl font-bold text-corporate-900">Upperhill Retail Plaza Lighting</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Architectural commercial lighting automation, emergency exit grid wiring, and centralized distribution panels for a multi-level retail facility.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-1">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Lighting Automation</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Emergency Systems</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Industrial & Security -->
+            <div class="project-card industrial security bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg transition group">
+                <div class="relative h-64 overflow-hidden bg-slate-100">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Mombasa Port Logistics Depot" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-3 left-3 bg-corporate-900/90 backdrop-blur text-corporate-amber text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                        Industrial & Security
+                    </div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-xs text-corporate-600 font-semibold uppercase tracking-wider"><i class="fa-solid fa-location-dot text-corporate-amber mr-1"></i> Mombasa Port Logistics Hub</div>
+                    <h3 class="text-xl font-bold text-corporate-900">Mombasa Freight Depot Security Grid</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Heavy-duty industrial power distribution combined with a 24/7 central security control room featuring thermal perimeter cameras and automated access gates.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-1">
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Industrial Power</span>
+                        <span class="bg-slate-100 text-slate-600 text-[10px] font-medium px-2 py-0.5 rounded">Control Rooms</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- High-Conversion CTA Banner -->
+    <section class="bg-corporate-900 text-white py-16 px-4 sm:px-8 mb-12">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Let's Engineer Your Next Project</h2>
+            <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+                Whether you need robust power distribution, solar arrays, or secure perimeter networks, our team delivers industrial-grade execution on schedule.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+                <a href="contact.html" class="bg-corporate-amber hover:bg-amber-600 text-corporate-900 font-bold px-8 py-3.5 rounded-md text-center transition shadow-lg">
+                    Request a Quotation
+                </a>
+                <a href="services.html" class="bg-transparent hover:bg-white/10 text-white border border-slate-600 font-semibold px-8 py-3.5 rounded-md text-center transition">
+                    Explore Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-corporate-900 text-slate-400 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-corporate-amber rounded flex items-center justify-center text-corporate-900 font-black">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span class="font-bold text-white text-lg tracking-tight uppercase">Lubai</span>
+                </div>
+                <p class="text-xs text-slate-400">Professional electrical contracting, green energy installations, and industrial security integration.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-corporate-amber transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-corporate-amber transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-corporate-amber transition">Our Services</a></li>
+                    <li><a href="projects.html" class="hover:text-corporate-amber transition">Portfolio</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Core Sectors</h4>
+                <ul class="space-y-2 text-xs">
+                    <li>Power Distribution</li>
+                    <li>Solar Grid Integration</li>
+                    <li>Industrial Wiring</li>
+                    <li>Perimeter Security</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-sm">Contact Info</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><i class="fa-solid fa-location-dot text-corporate-amber mr-2"></i> Nairobi, Kenya</li>
+                    <li><i class="fa-solid fa-phone text-corporate-amber mr-2"></i> +254 721 790 042/ +254 769 219 295</li>
+                    <li><i class="fa-solid fa-envelope text-corporate-amber mr-2"></i> info@lubai.co.ke</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-corporate-800 py-4 text-center text-xs text-slate-500">
+            &copy; 2026 Lubai Ltd. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Interactive Filter & Mobile Menu Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Category Filter Logic
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active styling on filter buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-corporate-900', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-600');
+            });
+            event.target.classList.remove('bg-slate-100', 'text-slate-600');
+            event.target.classList.add('bg-corporate-900', 'text-white');
+
+            // Show/Hide Cards based on filter selection
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
